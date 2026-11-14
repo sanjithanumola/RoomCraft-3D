@@ -1,0 +1,6 @@
+{
+  "name": "RoomCraft 3D",
+  "description": "Interactive 3D Interior Design Studio for creating rooms, customizing PBR materials, arranging furniture, and visualizing dream spaces in real time.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

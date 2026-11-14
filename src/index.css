@@ -1,0 +1,89 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --rc-bg: #0c0e12;
+  --rc-surface: #13161c;
+  --rc-elevated: #1a1e26;
+  --rc-border: rgba(255, 255, 255, 0.08);
+  --rc-text: #f1f3f5;
+  --rc-muted: #8b949e;
+  --rc-accent: #d9a05b;
+  --rc-accent-hover: #e5b272;
+}
+
+.theme-graphite {
+  --rc-bg: #111317;
+  --rc-surface: #181b20;
+  --rc-elevated: #21252c;
+  --rc-border: rgba(255, 255, 255, 0.09);
+  --rc-accent: #5b8def;
+  --rc-accent-hover: #74a0f4;
+}
+
+.theme-studio-light {
+  --rc-bg: #1c222b;
+  --rc-surface: #252c37;
+  --rc-elevated: #2e3745;
+  --rc-border: rgba(255, 255, 255, 0.12);
+  --rc-text: #f8fafc;
+  --rc-muted: #94a3b8;
+  --rc-accent: #e09f5a;
+  --rc-accent-hover: #ebb274;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+    font-family: "DM Sans", system-ui, -apple-system, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+
+  .font-mono-num {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom sleek scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.22);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.38);
+}
+
+/* Range slider normalization */
+input[type="range"] {
+  accent-color: var(--rc-accent);
+}
+
+/* Print Room Plan styling */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+}
